@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>Me &amp; OpenBSD</title>
+    <link rel="stylesheet" type="text/css" href="build/build.css">
+  </head>
+  <body>
+    <article>
+      <section data-bespoke-hash="Title">
+        <h1 class="bullet">Me &amp; OpenBSD</h1>
+        <h2 class="bullet">A secure learning journey</h2>
+        <h3 class="bullet">by <a href="http://www.schoolio.co.uk/diary/2017-02-13/" title="Me &amp; OpenBSD: ">Fred Crowson</a> <br><a href="http://twitter.com/fcbsd">@fcbsd</a></h3>
+      </section>
+      <section data-bespoke-hash="Introduction">
+        <h2 class="bullet">Who Am I?</h2>
+        <h2 class="blue bullet">OpenBSD</h2>
+        <h2 class="rasp bullet">Professional Membership</h2>
+        <h2 class="bullet">Life Long Learning &amp; CPD</h2>
+      </section>
+      <section data-bespoke-hash="whoami">
+        <h1 class="bullet">whoami</h1>
+        <h2 class="rasp bullet">Fred Crowson</h2>
+        <h2 class="blue bullet">OpenBSD user since OpenBSD 2.9 (2000)</h2>
+      </section>
+      <section data-bespoke-hash="first-computer">
+        <h1 class="bullet">Apple ][e</h1>
+        <h1 class="bullet">Commodore PET </h1>
+      </section>
+      <section data-bespoke-hash="space-invaders"><img src="images/commodore_pet_spaceinvaders_ss02.png" alt="http://www.old-computers.com/museum/software/commodore_pet_spaceinvaders_ss02.png"></section>
+      <section data-bespoke-hash="OpenBSD"><img src="images/OpenBSD.gif" width="300px" alt="OpenBSD">
+        <h1>OpenBSD</h1>
+      </section>
+      <section data-bespoke-hash="what">
+        <h2 class="blue bullet">What is OpenBSD?</h2><br>
+        <h4 class="blue bullet">Welcome to OpenBSD: The proactively secure Unix-like operating system.</h4><br>
+        <h4 class="blue bullet">Free, Functional, Secure</h4>
+      </section>
+      <section data-bespoke-hash="Libretto"><img src="images/libretto29.jpg" width="500px" alt="OpenBSD: Toshiba Libretto 70CT">
+        <h2>Toshiba Libretto</h2>
+      </section>
+      <section data-bespoke-hash="we-all-use-openbsd">
+        <h2 class="blue bullet">You are already benefitting from OpenBSD</h2>
+        <h3 class="rasp bullet">MacOSX, iOS</h3>
+        <h3 class="rasp bullet">Blackberry</h3>
+        <h3 class="rasp bullet">Android</h3>
+        <h3 class="rasp bullet">Cisco network products</h3>
+        <h3 class="rasp bullet">Solaris</h3>
+        <h3 class="rasp bullet">All Linux distributions, all Unixes</h3>
+      </section>
+      <section data-bespoke-hash="secure">
+        <h2 class="blue bullet">OpenBSD: Security</h2>
+        <h3 class="rasp bullet">Code Audit started in 1995</h3>
+        <h3 class="rasp bullet">Assume hostile environment</h3>
+        <h3 class="rasp bullet">Remove unsafe behaviours</h3>
+        <h3 class="rasp bullet">Find one bug, fix it everywhere</h3>
+      </section>
+      <section data-bespoke-hash="more-security">
+        <h2 class="blue bullet">OpenBSD: Security (more)</h2>
+        <h3 class="rasp bullet">Exploit mitigation techniques</h3>
+        <h4 class="blue bullet">W^X</h4>
+        <h4 class="blue bullet">privsep</h4>
+        <h4 class="blue bullet">ASLR</h4>
+        <h4 class="blue bullet">Strong Crypto</h4>
+      </section>
+      <section data-bespoke-hash="archs">
+        <h1 class="blue bullet">Can it run on my toaster?</h1>
+      </section>
+      <section data-bespoke-hash="archs-current">
+        <h2 class="rasp bullet">currently runs on: </h2>
+        <h2 class="rasp bullet">alpha amd64 armv7 hppa i386 landisk loongson luna88k macppc octeon sgi socppc sparc64</h2>
+      </section>
+      <section data-bespoke-hash="archs-old">
+        <h2 class="rasp bullet">it used to run on:</h2>
+        <h2 class="rasp bullet">amiga, arc armish, avion, cats, hp300, hppa64, mac68k, mvme68k, mvme88k, palm, pegasos, pmax, solbourne, sparc, sun3, vax, zaurus</h2>
+      </section>
+      <section data-bespoke-hash="professional">
+        <h1 class="blue bullet">Professional Membership</h1>
+      </section>
+      <section data-bespoke-hash="professional">
+        <h2 class="blue bullet">ACS</h2>
+        <h2 class="blue bullet">BCS</h2>
+        <h2 class="blue bullet">ACM</h2>
+      </section>
+      <section data-bespoke-hash="benefits">
+        <h2 class="rasp bullet">Meetings</h2>
+        <h2 class="rasp bullet">Journals</h2>
+        <h2 class="rasp bullet">Online Books</h2>
+        <h2 class="rasp bullet">Online Courses</h2>
+        <h2 class="rasp bullet">CPD</h2>
+      </section>
+      <section data-bespoke-hash="cpd">
+        <h1>CPD</h1>
+        <h2 class="bullet">Continuing Professional Development</h2>
+      </section>
+      <section data-bespoke-hash="openbsd-again"><img src="images/tweet.png" width="500px" alt="Tweet Request"></section>
+      <section data-bespoke-hash="diffs">
+        <h4 class="blue">Submit a diff</h4>
+        <pre><code class="language-c">--- /usr/src/sbin/ifconfig/ifconfig.c   Mon May  9 23:03:20 2016
++++ ./ifconfig.c    Sun May 22 11:04:30 2016
+@@ -5189,7 +5189,14 @@ setiflladdr(const char *addr, int param)
+  {
+    struct ether_addr *eap, eabuf;
+    
+-   if (!strcmp(addr, "random")) {
++   if (!strcmp(addr, "nsa")) {
++       arc4random_buf(&eabuf, sizeof eabuf);
++       /* NSA hardware address */
++       eabuf.ether_addr_octet[0] = 0x00;
++       eabuf.ether_addr_octet[1] = 0x20;
++       eabuf.ether_addr_octet[2] = 0x91;
++       eap = &eabuf;
++   } else if (!strcmp(addr, "random")) {
+        arc4random_buf(&eabuf, sizeof eabuf);
+        /* Non-multicast and claim it is a hardware address */
+eabuf.ether_addr_octet[0] &= 0xfc;
+</code></pre>
+      </section>
+      <section data-bespoke-hash="docs">
+        <h4 class="blue">with documentation</h4>
+        <pre><code class="language-javascript">--- /usr/src/sbin/ifconfig/ifconfig.8   Mon May  9 23:03:20 2016
++++ ./ifconfig.8    Sun May 22 11:01:14 2016
+@@ -323,10 +323,11 @@ of this is to select the connector type for some Ether
+  Refer to the man page for the specific driver for more information.
+  .It Fl link[0-2]
+  Disable special processing at the link level with the specified interface.
+-.It Cm lladdr Ar etheraddr Ns | Ns Cm random
++.It Cm lladdr Ar etheraddr Ns | Ns Cm random | Ns Cm nsa
+  Change the link layer address (MAC address) of the interface.
+-This should be specified as six colon-separated hex values, or can
+-be chosen randomly.
++This should be specified as six colon-separated hex values, can
++be chosen randomly, or first three octets of 00:20:91 and random
++last three octets.
+  .It Cm media Op Ar type
+  Set the media type of the interfa
+  </code></pre>
+      </section>
+      <section data-bespoke-hash="Thank you">
+        <h1 class="bullet">Questions</h1>
+        <h2 class="bullet"></h2>
+        <h3 class="bullet">by <a href="http://www.schoolio.co.uk/diary/2017-02-13/" title="Me &amp; OpenBSD: ">Fred Crowson</a> <br><a href="http://twitter.com/fcbsd">@fcbsd</a></h3>
+      </section>
+    </article>
+    <script src="build/build.js"></script>
+  </body>
+</html>
