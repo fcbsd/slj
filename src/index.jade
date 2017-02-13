@@ -75,14 +75,89 @@ html
             h4.blue.bullet ASLR
             h4.blue.bullet Strong Crypto
 
+        section(data-bespoke-hash='archs')
+            h1.blue.bullet Can it run on my toaster?
+
+        section(data-bespoke-hash='archs-current')
+            h2.rasp.bullet currently runs on: 
+            h2.rasp.bullet alpha amd64 armv7 hppa i386 landisk loongson luna88k macppc octeon sgi socppc sparc64
+
+        section(data-bespoke-hash='archs-old')
+            h2.rasp.bullet it used to run on:
+            h2.rasp.bullet amiga, arc armish, avion, cats, hp300, hppa64, mac68k, mvme68k, mvme88k, palm, pegasos, pmax, solbourne, sparc, sun3, vax, zaurus
+
+        section(data-bespoke-hash='professional')
+            h1.blue.bullet Professional Membership
+
         section(data-bespoke-hash='professional')
             h2.blue.bullet ACS
             h2.blue.bullet BCS
             h2.blue.bullet ACM
 
+        section(data-bespoke-hash='benefits')
+            h2.rasp.bullet Meetings
+            h2.rasp.bullet Journals
+            h2.rasp.bullet Online Books
+            h2.rasp.bullet Online Courses
+            h2.rasp.bullet CPD
+
         section(data-bespoke-hash='cpd')
             h1 CPD
-            h2 Continuing Professional Development
+            h2.bullet Continuing Professional Development
+
+        section(data-bespoke-hash='openbsd-again')
+            img(src='images/tweet.png' width='500px' alt='Tweet Request')
+
+        section(data-bespoke-hash='diffs')
+            h4.blue Submit a diff
+            pre
+                code.language-c.
+                    --- /usr/src/sbin/ifconfig/ifconfig.c   Mon May  9 23:03:20 2016
+                    +++ ./ifconfig.c    Sun May 22 11:04:30 2016
+                    @@ -5189,7 +5189,14 @@ setiflladdr(const char *addr, int param)
+                      {
+                        struct ether_addr *eap, eabuf;
+                    
+                    -   if (!strcmp(addr, "random")) {
+                    +   if (!strcmp(addr, "nsa")) {
+                    +       arc4random_buf(&eabuf, sizeof eabuf);
+                    +       /* NSA hardware address */
+                    +       eabuf.ether_addr_octet[0] = 0x00;
+                    +       eabuf.ether_addr_octet[1] = 0x20;
+                    +       eabuf.ether_addr_octet[2] = 0x91;
+                    +       eap = &eabuf;
+                    +   } else if (!strcmp(addr, "random")) {
+                            arc4random_buf(&eabuf, sizeof eabuf);
+                            /* Non-multicast and claim it is a hardware address */
+                    eabuf.ether_addr_octet[0] &= 0xfc;
+
+        section(data-bespoke-hash='docs')
+            h4.blue with documentation
+            pre
+                code.language-javascript.
+                    --- /usr/src/sbin/ifconfig/ifconfig.8   Mon May  9 23:03:20 2016
+                    +++ ./ifconfig.8    Sun May 22 11:01:14 2016
+                    @@ -323,10 +323,11 @@ of this is to select the connector type for some Ether
+                      Refer to the man page for the specific driver for more information.
+                      .It Fl link[0-2]
+                      Disable special processing at the link level with the specified interface.
+                    -.It Cm lladdr Ar etheraddr Ns | Ns Cm random
+                    +.It Cm lladdr Ar etheraddr Ns | Ns Cm random | Ns Cm nsa
+                      Change the link layer address (MAC address) of the interface.
+                    -This should be specified as six colon-separated hex values, or can
+                    -be chosen randomly.
+                    +This should be specified as six colon-separated hex values, can
+                    +be chosen randomly, or first three octets of 00:20:91 and random
+                    +last three octets.
+                      .It Cm media Op Ar type
+                      Set the media type of the interfa
+                      
+        section(data-bespoke-hash='Thank you')
+            h1.bullet Questions
+            h2.bullet 
+            h3.bullet by <a href="http://www.schoolio.co.uk/diary/2017-02-13/" title="Me &amp; OpenBSD: ">Fred Crowson</a> 
+                br
+                a(href='http://twitter.com/fcbsd') @fcbsd
 
 
     script(src='build/build.js')
